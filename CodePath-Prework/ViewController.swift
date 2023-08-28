@@ -12,6 +12,41 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    private func createLayer() {
+        let layer = CAEmitterLayer()
+        layer.emitterPosition = CGPoint(x: view.center.x,
+                                        y: -100)
+        
+        let colors: [UIColor] = [
+            .systemRed,
+            .systemBlue,
+            .systemOrange,
+            .systemGreen,
+            .systemPink,
+            .systemYellow,
+            .systemPurple
+        ]
+        
+        let cells: [CAEmitterCell] = colors.compactMap {
+            let cell = CAEmitterCell()
+            cell.scale = 0.01
+            cell.emissionRange = .pi * 2
+            cell.lifetime = 10
+            cell.birthRate = 50
+            cell.velocity = 150
+            cell.color = $0.cgColor
+    //        cell.spin
+            cell.contents = UIImage(named: "confetti")!.cgImage
+            return cell
+        }
+    
+
+        
+        
+        layer.emitterCells = cells
+        view.layer.addSublayer(layer)
+    }
 
     @IBAction func changeBackgroundColor(_ sender: UIButton) {
         let randomColor = changeColor()
@@ -19,6 +54,8 @@ class ViewController: UIViewController {
         
         let randomTextColor = changeColor()
         jobLabel.textColor = randomTextColor
+        
+        createLayer()
     }
     
     @IBOutlet weak var jobLabel: UILabel!
