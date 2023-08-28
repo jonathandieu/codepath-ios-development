@@ -2,9 +2,9 @@
 
 Submitted by: **Jonathan Dieu**
 
-**Jontroduction** is an app that... [TODO]
+**Jontroduction** is a simple app that provides a short description of my name, the school I attend, and my job title.
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/a8sfgtq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
